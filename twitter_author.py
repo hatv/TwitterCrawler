@@ -44,8 +44,8 @@ def terminate(signal, frame):
 signal.signal(signal.SIGINT, terminate)
 
 # Fill with your Twitter app details: https://apps.twitter.com/
-APP_KEY = 'A5cTXMm5cN0Sk7gGA5rgK35ee'
-APP_SECRET = 'V5PDP254HDzt6mMreaykgt4nSI8dav5i5nOD46H8peqtZvcL4Z'
+APP_KEY = ''
+APP_SECRET = ''
 
 twitter = Twython(APP_KEY, APP_SECRET)
 

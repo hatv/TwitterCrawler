@@ -34,18 +34,14 @@ def terminate(signal, frame):
 signal.signal(signal.SIGINT, terminate)
 
 # Fill with your Twitter app details: https://apps.twitter.com/
-APP_KEY = 'h8QAsVCofDKkecVhASsBc9fQ6'
-APP_SECRET = 'WtrpDcCGrhFQsNRro1CCLhzMicZRjMERyPDKinRZ8Rs9GjHc2Z'
-# OAUTH_TOKEN = '968583049-J4GO2Y5RIV2YLva7Kvyq0h0R0zdqBHaRpXLUXwMO'
-# OAUTH_TOKEN_SECRET = 'XQXiRw5rIEAeLbIIkb96sRFhonJC5wgBaC33XGJA0XsEP'
+APP_KEY = ''
+APP_SECRET = ''
 
 twitter = Twython(APP_KEY, APP_SECRET)
 
 # The Twitter API has a query string size limit
 query = urllib.request.quote(
-    'dengue OR dengo OR chikungunya OR mosquitos OR mosquito OR (severe headaches) OR (sudden high fever)'
-    ' OR (pain bahind eyes) OR (severe joint muscle pain) OR (nausea feber) OR (feber skin rash) OR (mild bleeading)'
-    ' OR (feber cabeça) OR (feber cabeca) OR (feber olhos) OR (feber musculares) OR (feber articulações)'
+    'word OR other_word OR (both words)'
 ).encode('utf8')
 
 last_id = -1
